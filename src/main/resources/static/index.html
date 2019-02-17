@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Page</title>
+    <script type="text/javascript">
+        const ws = new WebSocket("ws://" + window.location.hostname + ":8080/ws");
+        ws.onopen = () => {
+        };
+        ws.onmessage = (evt) => {
+           console.log(text)
+        };
+        ws.onclose = () => {
+
+        };
+        ws.onerror = (err) => {
+        };
+        const onSubmit = () => {
+            ws.send(document.getElementById("textInput").value);
+        };
+    </script>
+</head>
+<body>
+<div>
+    <input type="text" id="textInput">
+    <input type="button" id="submit" value="OK" onclick="onSubmit()">
+</div>
+</body>
+</html>

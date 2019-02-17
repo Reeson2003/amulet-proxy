@@ -1,2 +1,3 @@
 proxy:
   domain: https://amuletdrakona.ru/
+  polling interval: 1000
